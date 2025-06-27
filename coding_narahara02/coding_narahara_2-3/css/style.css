@@ -1,0 +1,53 @@
+@charset "utf-8";
+body {
+  margin: 0;
+  font-family: sans-serif; /* 適宜調整 */
+}
+
+.container {
+  max-width: 960px; /* ある程度の幅を設定 */
+  display: flex; /* 横並びにするため */
+  align-items: center; /* 垂直方向中央揃え */
+  justify-content: space-between; /* 左右に配置 */
+  padding: 20px; /* 内側の余白 */
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 2em; /* タイトルの文字サイズ */
+  margin: 0; /* h1のデフォルトマージンをリセット */
+}
+
+nav ul {
+  list-style: none; 
+  margin: 0;
+  padding: 0;
+  display: flex; 
+  gap: 30px; 
+}
+
+nav li {
+  position: relative; 
+}
+
+nav li:not(:last-child)::after {  
+  content: '';
+  position: absolute;
+  right: -15px; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 20px; 
+  background-color: #000; 
+}
+
+nav a {
+  text-decoration: none; 
+  color: #000; 
+  font-size: 1.1em; 
+  padding: 5px 0; 
+}
+
+nav a:hover {
+  color: #007bff; 
+}
